@@ -1,0 +1,20 @@
+:8082
+
+log stdout
+
+basicauth / {
+    # password hiccup
+    a JDJhJDEwJEVCNmdaNEg2Ti5iejRMYkF3MFZhZ3VtV3E1SzBWZEZ5Q3VWc0tzOEJwZE9TaFlZdEVkZDhX
+    b JDJhJDEwJEVCNmdaNEg2Ti5iejRMYkF3MFZhZ3VtV3E1SzBWZEZ5Q3VWc0tzOEJwZE9TaFlZdEVkZDhX
+    c JDJhJDEwJEVCNmdaNEg2Ti5iejRMYkF3MFZhZ3VtV3E1SzBWZEZ5Q3VWc0tzOEJwZE9TaFlZdEVkZDhX
+}
+
+route { 
+    import webdav.conf
+}
+
+route /prefix/* {
+    webdav prefix {
+        scope _dev/root
+    }
+}

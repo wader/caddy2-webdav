@@ -1,0 +1,13 @@
+:8081
+
+log stdout
+
+basicauth / a hiccup
+basicauth / b hiccup
+basicauth / c hiccup
+
+#import webdav.conf
+
+webdav prefix {
+    scope _dev/root
+}
